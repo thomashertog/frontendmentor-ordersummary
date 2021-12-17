@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "Red Hat";
+    src: url(fonts/RedHatDisplay-Black.ttf) format("truetype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Red Hat";
+    src: url(fonts/RedHatDisplay-Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Red Hat";
+    src: url(fonts/RedHatDisplay-Medium.ttf) format("truetype");
+    font-weight: 500;
+}
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+h2{margin-bottom: 0;}
+
+strong{font-weight: 900;}
+
+p{
+    margin-inline: 1.5em;
+}
+
+body{
+    background-color: var(--pale-blue);
+    padding: 1em;
+    font-family: "Red Hat";
+
+    display: flex;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-summary{
+    background-color: white;
+    border-radius: 1em;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-content: center;
+    max-width: 400px;
+}
+
+.order-summary h2, p{
+    text-align: center;
+}
+
+.order-summary img.hero{
+    order: -1;
+    margin: -1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.order-summary .order-details{
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    background-color: var(--very-pale-blue);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.order-summary .order-details .order-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.btn-link, a{
+    background-color: transparent;
+    border: none;
+}
+
+.btn-link{
+    text-decoration: underline;
+    color: var(--bright-blue);
+    font-weight: 900;
+}
+
+.button-cta{
+    background-color: var(--bright-blue);
+    border-radius: 1em;
+    color: white;
+    padding: 1em;
+    border: none;
+    font-weight: 900;
+}
+
+:is(.button-cta, .btn-link):hover{
+    opacity: .8;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    font-weight: 900;
+    color: var(--desaturated-blue);
+}
+
+a:hover{
+    color: var(--dark-blue);
+}
+
+p, .order-item span{
+    color: var(--desaturated-blue);
+}
+
+.order-item span{
+    font-weight: 700;
+}
